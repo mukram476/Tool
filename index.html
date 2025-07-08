@@ -768,4 +768,649 @@
             }
         }
 
-        @medi
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 16px 0;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 72px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 72px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: var(--transition);
+                z-index: 99;
+                box-shadow: var(--box-shadow-lg);
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav a {
+                font-size: 1.125rem;
+                padding: 12px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 32px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo-text {
+                font-size: 1.25rem;
+            }
+            
+            .categories-grid, .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <span class="logo-text">Tool<span>Kit</span>Pro</span>
+                </a>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#popular-tools">Popular Tools</a></li>
+                        <li><a href="#all-tools">All Tools</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate">100+ Powerful Online Tools For Everyone</h1>
+            <p class="animate delay-1">Free web tools for developers, designers, marketers, students, and everyday users. No installation required - work directly in your browser.</p>
+            
+            <div class="search-container animate delay-2">
+                <input type="text" class="search-input" placeholder="Search for tools (e.g. PDF converter, image compressor)...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate">Browse By Category</h2>
+                <a href="#" class="view-all animate delay-1">View All Categories <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="categories-grid">
+                <a href="#" class="category-card animate delay-1">
+                    <div class="category-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="category-title">Documents</h3>
+                    <p class="category-count">24 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-2">
+                    <div class="category-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="category-title">Images</h3>
+                    <p class="category-count">18 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-3">
+                    <div class="category-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="category-title">Video</h3>
+                    <p class="category-count">12 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-4">
+                    <div class="category-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="category-title">Audio</h3>
+                    <p class="category-count">8 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-1">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="category-title">Developer</h3>
+                    <p class="category-count">22 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-2">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="category-title">Marketing</h3>
+                    <p class="category-count">14 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-3">
+                    <div class="category-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="category-title">Security</h3>
+                    <p class="category-count">9 tools</p>
+                </a>
+                
+                <a href="#" class="category-card animate delay-4">
+                    <div class="category-icon">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <h3 class="category-title">Converters</h3>
+                    <p class="category-count">16 tools</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-tools" id="popular-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate">Most Popular Tools</h2>
+                <a href="#" class="view-all animate delay-1">View All Tools <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card animate delay-1">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">PDF to Word Converter</h3>
+                            <p class="tool-category">Documents</p>
+                        </div>
+                    </div>
+                    <p class="tool-description">Convert PDF files to editable Word documents while preserving formatting and layout.</p>
+                    <div class="tool-footer">
+                        <div class="tool-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                            <a href="#" class="btn btn-outline btn-sm">Details</a>
+                        </div>
+                        <div class="tool-stats">
+                            <span class="tool-stat"><i class="fas fa-star"></i> 4.9</span>
+                            <span class="tool-stat"><i class="fas fa-users"></i> 12K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card animate delay-2">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-compress-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">Image Compressor</h3>
+                            <p class="tool-category">Images</p>
+                        </div>
+                    </div>
+                    <p class="tool-description">Reduce image file size without losing quality. Supports JPG, PNG, and WebP formats.</p>
+                    <div class="tool-footer">
+                        <div class="tool-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                            <a href="#" class="btn btn-outline btn-sm">Details</a>
+                        </div>
+                        <div class="tool-stats">
+                            <span class="tool-stat"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="tool-stat"><i class="fas fa-users"></i> 8.5K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card animate delay-3">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">Video to MP3 Converter</h3>
+                            <p class="tool-category">Video</p>
+                        </div>
+                    </div>
+                    <p class="tool-description">Extract audio from video files and save as MP3. Supports MP4, AVI, MOV formats.</p>
+                    <div class="tool-footer">
+                        <div class="tool-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                            <a href="#" class="btn btn-outline btn-sm">Details</a>
+                        </div>
+                        <div class="tool-stats">
+                            <span class="tool-stat"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="tool-stat"><i class="fas fa-users"></i> 7.2K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card animate delay-4">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">QR Code Generator</h3>
+                            <p class="tool-category">Marketing</p>
+                        </div>
+                    </div>
+                    <p class="tool-description">Create customizable QR codes for URLs, contact info, WiFi credentials and more.</p>
+                    <div class="tool-footer">
+                        <div class="tool-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                            <a href="#" class="btn btn-outline btn-sm">Details</a>
+                        </div>
+                        <div class="tool-stats">
+                            <span class="tool-stat"><i class="fas fa-star"></i> 4.9</span>
+                            <span class="tool-stat"><i class="fas fa-users"></i> 10.3K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card animate delay-1">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">Password Generator</h3>
+                            <p class="tool-category">Security</p>
+                        </div>
+                    </div>
+                    <p class="tool-description">Create strong, random passwords with customizable length and character sets.</p>
+                    <div class="tool-footer">
+                        <div class="tool-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                            <a href="#" class="btn btn-outline btn-sm">Details</a>
+                        </div>
+                        <div class="tool-stats">
+                            <span class="tool-stat"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="tool-stat"><i class="fas fa-users"></i> 9.1K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-card animate delay-2">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-js"></i>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">JavaScript Minifier</h3>
+                            <p class="tool-category">Developer</p>
+                        </div>
+                    </div>
+                    <p class="tool-description">Minify and compress JavaScript code to reduce file size and improve load times.</p>
+                    <div class="tool-footer">
+                        <div class="tool-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                            <a href="#" class="btn btn-outline btn-sm">Details</a>
+                        </div>
+                        <div class="tool-stats">
+                            <span class="tool-stat"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="tool-stat"><i class="fas fa-users"></i> 6.7K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-tool">
+        <div class="container">
+            <div class="featured-container">
+                <div class="featured-content">
+                    <span class="featured-badge">Featured Tool</span>
+                    <h2 class="featured-title">All-in-One File Converter</h2>
+                    <p class="featured-description">Convert between 100+ file formats including documents, images, videos, and audio files. Our powerful converter preserves quality while transforming your files quickly and securely.</p>
+                    <a href="#" class="btn btn-white">Try It Now</a>
+                </div>
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="File Converter Tool">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="all-tools" id="all-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">All Available Tools</h2>
+            </div>
+            
+            <table class="tools-table">
+                <thead>
+                    <tr>
+                        <th>Tool Name</th>
+                        <th>Category</th>
+                        <th>Popularity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="tool-row">
+                                <div class="tool-row-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div>
+                                    <div class="tool-row-name">PDF to Word Converter</div>
+                                    <div class="tool-row-category">Documents</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Documents</td>
+                        <td>
+                            <span class="badge badge-success">Most Popular</span>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-row">
+                                <div class="tool-row-icon">
+                                    <i class="fas fa-compress-alt"></i>
+                                </div>
+                                <div>
+                                    <div class="tool-row-name">Image Compressor</div>
+                                    <div class="tool-row-category">Images</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Images</td>
+                        <td>
+                            <span class="badge badge-success">Popular</span>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-row">
+                                <div class="tool-row-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div>
+                                    <div class="tool-row-name">Video to MP3 Converter</div>
+                                    <div class="tool-row-category">Video</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Video</td>
+                        <td>
+                            <span class="badge badge-primary">New</span>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-row">
+                                <div class="tool-row-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div>
+                                    <div class="tool-row-name">QR Code Generator</div>
+                                    <div class="tool-row-category">Marketing</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Marketing</td>
+                        <td>
+                            <span class="badge badge-success">Popular</span>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-row">
+                                <div class="tool-row-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <div>
+                                    <div class="tool-row-name">Password Generator</div>
+                                    <div class="tool-row-category">Security</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Security</td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm">Use Tool</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-container">
+                <h2 class="newsletter-title">Stay Updated</h2>
+                <p class="newsletter-description">Subscribe to our newsletter to get notified about new tools, updates, and special offers.</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <h3>ToolKit Pro</h3>
+                    <p>We provide free, high-quality online tools to help you work more efficiently. Our tools are designed to be simple, powerful, and accessible to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#popular-tools">Popular Tools</a></li>
+                        <li><a href="#all-tools">All Tools</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Video</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Developer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ToolKit Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Animate elements when scrolling
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animation
+        document.querySelectorAll('.animate').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        // Run animation on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchBtn = document.querySelector('.search-btn');
+
+        searchBtn.addEventListener('click', () => {
+            if (searchInput.value.trim() !== '') {
+                alert('Searching for: ' + searchInput.value);
+                // In a real app, this would redirect to search results
+            }
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+                alert('Searching for: ' + searchInput.value);
+                // In a real app, this would redirect to search results
+            }
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            if (emailInput.value.trim() !== '') {
+                alert('Thank you for subscribing with: ' + emailInput.value);
+                emailInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
